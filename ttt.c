@@ -143,7 +143,7 @@ void play_game(void)
 }
 
     if (!game_over) {
-        printf("Tie!\n");
+        printf("Its a draw!\n");
 }   else if (player == HUMAN) {
         printf("What! How did I miss that. Congratulations I guess...\n");
 }   else {
