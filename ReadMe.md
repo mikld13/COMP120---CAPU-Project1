@@ -2,7 +2,7 @@ Tic-Tac-Toe Code Explination
 
 The objective of this project was to write a tic-tac-toe game where the user plays against the computer. The user plays as O and goes first, while X, the computer, picks its moves at random. 
 
-Each number below matches a numbered comment in my .c file.
+Each number matches a numbered comment in my .c file.
 1.	The board is stored as a row of 9 squares, numbered 0 to 8. When printed, it is split into three rows of three using /n so it looks like a proper  tic-tac-toe board.
 2.	Names are given to the three options a square can hold. O is used for the user input and X is used for the computer’s moves, while the last option is empty. This is simply a readability for code lower in the file.
 3.	init_board clears the board by setting every square back to empty and is called at the start of every game.
