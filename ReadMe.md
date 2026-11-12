@@ -10,7 +10,7 @@ Each number below matches a numbered comment in my .c file.
 7.	The next three are the vertical wins: 0-3-6, 1-4-7 and 2-5-8.
 8.	The last two are the diagonals: 0-4-8 and 2-4-6.
 9.	other_player enables turn switching by giving returning the opposite of the player who just took a turn. So, X if it is given O and O if it is given X. 
-10.	get_human_move asks the user for a square and keeps asking until a viable answer is given. If the user types something invalid, like a non number character, an invalid number (like 9 or 14), or a square that is already taken, it tells them what went wrong and asks again.
+10.	get_human_move asks the user for a square and keeps asking until a viable answer is given. If the user types something invalid, like a non number character, an invalid number, or a square that is already taken, it tells them what went wrong and asks again.
 11.	After every answer, whatever else the user typed on that line is thrown away. Without this, the program would keep reading the same bad input over and over.
 12.	get_computer_move picks a random square. If that square is already taken, it just picks again until it finds an empty one, so the computer can never make an illegal move.
 13.	take_turn handles a single move for the player and computer. For the user it asks for a square, and for the computer it picks one at random and prints which square it chose. Either way, the player's symbol is then placed on the board.
