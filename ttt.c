@@ -13,7 +13,7 @@ void init_board(char board[])
 {
     for (int i = 0; i < 9; i++) {
         board[i] = EMPTY;
-    }
+}
 }
 
 /* 4 */
@@ -24,10 +24,10 @@ void display_board(const char board[])
     for (int i = 0; i < 9; i++) {
         if (board[i] == EMPTY) {
             c[i] = '0' + i;
-        } else {
+}       else {
             c[i] = board[i];
-        }
-    }
+}
+}
 
     printf("\n");
     printf(" %c | %c | %c\n", c[0], c[1], c[2]);
@@ -56,7 +56,7 @@ char other_player(char player)
 {
     if (player == HUMAN) {
         return COMPUTER;
-    }
+}
     return HUMAN;
 }
 
@@ -71,18 +71,18 @@ int get_human_move(const char board[])
 
         if (scanf("%d", &square) != 1) {
             printf("  That is not a number. Enter a number from 0 to 8.\n");
-        } else if (square < 0 || square > 8) {
+}       else if (square < 0 || square > 8) {
             printf("  %d?!? Enter a number from 0 to 8.\n", square);
-        } else if (board[square] != EMPTY) {
+}       else if (board[square] != EMPTY) {
             printf("  TAKEN. Choose an empty one.\n");
-        } else {
+}       else {
             valid = true;
-        }
+}
 
         while (getchar() != '\n') {
             /* 11 */
-        }
-    }
+}
+}
     return square;
 }
 
@@ -106,7 +106,7 @@ void take_turn(char board[], char player)
     if (player == HUMAN) {
         square = get_human_move(board);
         board[square] = HUMAN;
-    } else {
+}   else {
         printf("Hmmmmmmmmm...\n");
         square = get_computer_move(board);
         board[square] = COMPUTER;
@@ -114,9 +114,9 @@ void take_turn(char board[], char player)
         printf("I choose %d.", square);
         if (!is_winner(board, COMPUTER)) {
             printf(" Bet you didnt expect that! Your move!");
-        }
+}
         printf("\n");
-    }
+}
 }
 
 /* 14 */
@@ -137,18 +137,18 @@ void play_game(void)
 
         if (is_winner(board, player)) {
             game_over = true;
-        } else {
+}       else {
             player = other_player(player);
-        }
-    }
+}
+}
 
     if (!game_over) {
         printf("Tie!\n");
-    } else if (player == HUMAN) {
+}   else if (player == HUMAN) {
         printf("What! How did I miss that. Congratulations I guess...\n");
-    } else {
+}   else {
         printf("HAHA. Better luck next time!\n");
-    }
+}
 }
 
 /* 15 */
@@ -162,12 +162,12 @@ bool play_again(void)
 
         while (getchar() != '\n') {
             /* 16 */
-        }
+}
 
         if (answer != 'y' && answer != 'q') {
             printf("  Please type y or q.\n");
-        }
-    }
+}
+}
     return answer == 'y';
 }
 
@@ -187,7 +187,7 @@ int main(void)
 
     do {
         play_game();
-    } while (play_again());
+}         while (play_again());
 
     printf("\nThat was fun! GGs.\n");
     return 0;
